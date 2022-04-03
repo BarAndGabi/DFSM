@@ -2,18 +2,20 @@ import java.util.Arrays;
 import java.util.List;
 
 import ac.il.afeka.Submission.Submission;
+import ac.il.afeka.fsm.DFSM;
 
 public class Main implements Submission, Assignment1 {
 
+	
 	@Override
 	public List<String> submittingStudentIds() {
-		return Arrays.asList("0123", "4567");
+		return Arrays.asList("206921777", "206215311");
 	}
 
 	@Override
 	public boolean compute(String dfsmEncoding, String input) throws Exception {
-		// TODO Auto-generated method stub
-		return false;
+		DFSM d = new DFSM(dfsmEncoding);
+		return d.compute(input);
 	}
 
 }
